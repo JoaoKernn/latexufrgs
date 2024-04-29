@@ -1,0 +1,55 @@
+
+% ----------------------------------------------------------
+% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
+% ----------------------------------------------------------
+\chapter[Introdução]{Introdução}
+% ----------------------------------------------------------
+
+Na indústria de petróleo uma das etapas de exploração é a Perfuração, que visa alcançar um reservatório subterrâneo de hidrocarbonetos através da construção de um poço. Esta etapa é extremamente importante para o setor petrolífero, pois é um processo que demanda altos investimentos e possui inúmeros riscos associados \cite{rocha2016projetos}. 
+
+Durante a perfuração, a ação promovida pela broca de perfuração gera a ruptura e desagregação das rochas de subsuperfície e como resultado, são gerados pequenos fragmentos comumente chamados de cascalhos de perfuração, que são levados à superfície para etapas de separação e descarte \cite{thomas}. A ação mecânica destes cascalhos nas paredes dos sistemas hidráulicos de perfuração causa o desgaste erosivo, principalmente nas tubulações curvas (\textit{elbows}), que são zonas suscetíveis ao impacto recorrente das partículas, devido ao efeito combinado da queda de pressão, turbulência, inércia, ação centrífuga e mudança brusca na direção de fluxo. Esse fenômeno pode resultar na falha dos materiais e equipamentos de perfuração, o que pode acarretar em sérios danos ambientais, econômicos e principalmente, risco à vida humana \cite{WANG}. Deste modo, os danos causados pela erosão são uma grande ameaça à confiabilidade e segurança dos sistemas de tubulação. Consequentemente, a previsão do comportamento da erosão nas tubulações curvas é de grande importância para identificar os locais mais propensos à erosão e avaliar a vida útil dos equipamentos do sistema hidráulico de perfuração de poços. 
+
+Diversos pesquisadores desenvolveram modelos numéricos para previsão do fenômenos de erosão, a fim de quantificar o desgaste nos materiais envolvidos em operações diversas da indústria. Estes modelos encontram-se presentes em diversos softwares comerciais fluidodinâmicos (Ansys, Comsol,OpenFOAM, entre outros) que são capazes de simular condições de escoamento e fornecem quantitativamente o desgaste erosivo resultante do impacto de partículas ou fluido em determinada parede de um material \cite{oka} \cite{dnv} \cite{finnie} \cite{maclaury}. 
+
+Durante as fases de perfuração de poços de petróleo, existem diversas incertezas com forte impacto no desgaste erosivo dos materiais que compõe as linhas hidráulicas, de modo que o processo de tomada de decisão em relação ao projeto de perfuração deva ser um procedimento probabilístico relacionado a estes atributos. Portanto, é necessário um estudo aprofundado das características das variáveis que influenciam no desgate erosivo para a realização de um projeto com confiabilidade e segurança operacional, em que os riscos e incertezas sejam mapeados e quantificados. O estudo das incertezas permite a redução dos incidentes e das falhas catastróficas de dutos em campo, através da otimização da seleção dos materiais que compõe a tubulação, estimativa de troca preventiva dos equipamentos ou controle de variáveis que influenciam no desgaste erosivo. 
+
+Em uma análise de incerteza probabilística, é possível que certas variáveis relacionadas ao problema apresentem uma aleatoriedade associada, cujo comportamento é aleatório e pode ser descrito por meio de funções estatísticas. Diversas metodologias de análise de risco estudam os atributos de forma aleatória e incorporam e tratam suas incertezas de modo probabilistico, com objetivo de obter como resultado a probabilidade da resposta estudada \cite{loschiavo} \cite{steagall} \cite{santoss2}. A Árvore de derivação é um método utilizado na análise de risco, cujo objetivo é discretizar em diferentes níveis cada atributo e simular todas as combinações possíveis dos atributos incertos discretizados. Após a simulação de todos os cenários, é realizado um tratamento estatístico para obter a curva de risco de falha. Essa abordagem permite avaliar a probabilidade e o impacto de cada cenário e auxilia na tomada de decisões informadas em relação aos riscos envolvidos no projeto \cite{madeira}. 
+
+A técnica de Monte Carlo é amplamente utilizada na análise de risco, combinando variáveis aleatórias que influenciam o desgaste para compor cenários de simulação. Esses cenários são gerados por sorteios aleatórios, levando em consideração a distribuição de probabilidade de cada variável \cite{hammers}. Cada cenário é simulado e permite a realização de um tratamento estatístico para obter a curva de risco de falha \cite{Srikanta} \cite{hammers}.
+
+O método da Árvore de derivação e o método de Monte Carlo, geralmente, resultam em muitos cenários de simulação. Deste modo, para a quantificação de risco estes métodos podem demandar um enorme esforço computacional para execução das simulações fluidodinâmicas, o que pode inviabilizar o processo de análise de falha.
+
+Deste modo, a utilização de metamodelos (\textit{Proxy models} ou \textit{Surrogate models}), surge como opção subsidiária das metodologias de análise de risco. O metamodelo pode substituir o simulador de fluxo para obtenção da análise de risco de falha, diminuindo o tempo e esforço computacional requerido para a obtenção das taxas erosivas. Uma forma de obtenção de metamodelos muito aplicada na indústria de petróleo é a metodologia de planejamento de experimentos. Este método visa compor uma matriz de ensaios com as variações dos atributos e obter a resposta para cada cenário de simulação. Através da validação estatística é possível a obtenção de um polinômio que represente as simulações fluidodinâmicas e que substituam o simulador numérico para geração das respostas para os cenários elaborados pelas técnicas de análise de risco \cite{risso1}.
+
+\section{Objetivo}
+
+
+    O objetivo principal deste trabalho consiste no desenvolvimento de uma metodologia para analisar o risco de falha devido ao desgaste erosivo em tubulações utilizadas na perfuração de poços petrolíferos. Para alcançar esse objetivo, serão aplicadas técnicas de análise de risco amplamente utilizadas em produção de reservatórios e análise econômica de projetos petrolíferos. Essa abordagem visa ampliar o leque de aplicação dessas metodologias, trazendo para o contexto de perfuração de poços e análise de falha para quantificação de risco.
+
+\section{Objetivos Específicos}   
+
+    Os objetivos específicos deste trabalho são:
+    
+    • Com o propósito de predizer o desgaste erosivo em condições operacionais específicas para a composição de Análise de Risco, será desenvolvido um modelo numérico utilizando Simulação Fluidodinâmica Computacional para a reprodução de escoamento multifásico em dutos petrolíferos empregados na perfuração de poços.
+    
+    • A etapa de triagem objetiva identificar as variáveis mais críticas por meio de Análise de Sensibilidade e Planejamento Plackett-Burman, a fim de comparar as metodologias. Será realizada uma avaliação do nível de influência individual de cada variável no desgaste por erosão, visando reduzir o tempo necessário para a geração dos cenários destinados à Análise de risco.
+    
+    • Com o propósito de prever os cenários necessários para a Análise de Risco, este estudo propõe a aplicação de Planejamento Estatístico por meio da técnica de Superfície de Resposta. Essa análise permitirá estimar os efeitos lineares, de interação e quadráticos significativos das variáveis que exercem influência sobre o desgaste erosivo, visando a criação de um metamodelo para redução do tempo e esforço computacional requeridos para elaboração dos métodos com confiabilidade estatística dos resultados.
+
+    • Realizar a comparação entre diferentes abordagens de Análise de risco de falha por desgaste erosivo em tubulações curvas de aço carbono utilizadas na Perfuração de poços petrolíferos. As metodologias a serem comparadas consistem no método da Árvore de derivação com atributos críticos, o método da Superfície de resposta aplicada à previsão da matriz da Árvore de derivação e a técnica de Monte Carlo previsto pelo metamodelo de Superfície de resposta. Além da análise comparativa das curvas de risco resultantes de cada metodologia, será levado em consideração o número de simulações numéricas necessárias em cada etapa.
+
+    
+
+\section{Organização da dissertação}
+
+Para a realização desta dissertação, foram elaborados os seguintes capítulos:
+
+• O Capítulo 2 apresenta uma revisão bibliográfica, onde são apresentados artigos científicos, dissertações e teses relacionados aos temas que servem como base para elaboração deste trabalho.
+
+• O Capítulo 3 demonstra o conceito de desgaste erosivo, a técnica de simulação fluidodinâmica computacional, os métodos de análise de risco para elaboração de cenários probabilísticos e os métodos de planejamento estatísticos para criação de metamodelos. 
+
+• O Capítulo 4 apresenta a metodologia proposta para criação do modelo de simulação numérica, triagem de atributos, análise de risco e elaboração do planejamento estatístico para obtenção de metamodelo de regressão.
+
+• O Capítulo 5 demonstra os resultados obtidos e a discussão.
+
+• O Capítulo 6 apresenta as conclusões e recomendações para trabalhos futuros.

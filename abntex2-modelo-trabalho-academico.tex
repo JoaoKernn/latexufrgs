@@ -1,0 +1,501 @@
+
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	french,				% idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---
+% Pacotes básicos 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern		
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{textcomp}
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{float}
+\usepackage{amsmath,amssymb}
+
+
+
+
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Análise de risco de falha por desgaste erosivo de tubulações curvas de aço-carbono por meio de Simulação numérica e metamodelo gerado por Superfície de resposta.
+}
+\autor{João Guilherme Cyrillo Kern}
+\local{Porto Alegre}
+\data{2023}
+\orientador{Prof. Dr. Marcelo Favaro Borges}
+\coorientador{Prof. Dr. Vinícius Ribeiro Machado da Silva}
+\instituicao{Universidade Federal do Rio Grande do Sul}
+\tipotrabalho{Dissertação}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+
+% --%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
+
+
+
+
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+%----------------------------------------------------
+\begin{capa}
+        \begin{center}
+                \begin{DoubleSpace}
+                \MakeUppercase{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL } \\
+                 \MakeUppercase{Escola de Engenharia} \\
+                \MakeUppercase{Programa de Pós-Graduação em Engenharia de Minas, Metalúrgica e de Materiais} \\
+                \end{DoubleSpace}
+                \vspace{5cm}
+				\MakeUppercase{\imprimirautor}  \\
+            
+                        				
+				\vspace{5cm}
+             \textbf{{\large\MakeUppercase{\imprimirtitulo}}} \\
+			 \textbf{{\large \MakeUppercase{\imprimirsubtitulo}}} \\
+				\vfill
+        {\large{\imprimirlocal \\ \imprimirdata }}
+        \end{center}
+\end{capa}   
+ % Capa
+
+
+% ---
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+ \begin{center}
+                \MakeUppercase{UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL } \\
+                 \MakeUppercase{Escola de Engenharia} \\
+                \MakeUppercase{Programa de Pós-graduação em Engenharia de Minas, Metalúrgica e Materiais} \\
+                
+                \vspace{4cm}
+				\MakeUppercase{\imprimirautor}  \\
+				\vspace{2cm}
+			    \begin{DoubleSpace}
+                \MakeUppercase{\textbf{\imprimirtitulo} } \\
+                \MakeUppercase{\textbf{\imprimirsubtitulo}} \\
+                \end{DoubleSpace} 
+      \end{center}
+    \vfill 
+    \begin{flushright} 
+    \parbox{0.6\linewidth}{
+		\imprimirtipotrabalho~apresentada ao Programa de Pós-Graduação em Engenharia de Minas, Metalúrgica e Materiais da \imprimirinstituicao~ como parte dos
+		requisitos necessários para a obtenção do grau de Mestre em Ciência e tecnologia dos Materiais.\\ \\
+		\textbf{\imprimirorientadorRotulo}~\imprimirorientador \\
+		\textbf{\imprimircoorientadorRotulo}~\imprimircoorientador}
+   \end{flushright} 
+		\vfill
+   \begin{center}
+   {\large{\imprimirlocal \\
+   \imprimirdata} }
+   \end{center} } % folha de rosto
+
+% ---
+
+% ---
+% Inserir a ficha bibliografica
+% ---
+
+% Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
+% catalogação-na-publicação''. Você pode utilizar este modelo como referência. 
+% Porém, provavelmente a biblioteca da sua universidade lhe fornecerá um PDF
+% com a ficha catalográfica definitiva após a defesa do trabalho. Quando estiver
+% com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
+% o conteúdo de implementação deste arquivo pelo comando abaixo:
+%
+% \begin{fichacatalografica}
+%     \includepdf{fig_ficha_catalografica.pdf}
+% \end{fichacatalografica}
+
+\begin{fichacatalografica}
+	\sffamily
+	\vspace*{\fill}					% Posição vertical
+	\begin{center}					% Minipage Centralizado
+	\fbox{\begin{minipage}[c][8cm]{15.5cm}		% Largura
+	\small
+\hspace{0.5cm} Kern. J.G.C.
+	%Sobrenome, Nome do autor
+	
+	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+	\imprimirlocal, \imprimirdata-
+	
+	\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
+	
+	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+	
+	\hspace{0.5cm}
+	\parbox[t]{\textwidth}{Dissertação, Universidade Federal do Rio Grande do Sul,
+	\imprimirdata.}\\
+	
+	\hspace{0.5cm}
+		
+  1. Desgaste erosivo 
+  2. Perfuração de poços
+  3. Simulação fluidodinâmica computacional,
+  4. Análise de risco
+  5. Árvore de Derivação
+  6. Monte Carlo 
+  7. Planejamento estatístico 
+  8. Superfície de resposta
+  9. Metamodelos.
+		I. Prof.Dr. Marcelo Favaro Borges.
+		II. Universidade Federal do Rio Grande do Sul.
+		III. Programa de Pós-Graduação em Engenharia de Minas, Metalúrgica e Materiais.
+		IV. Análise de Risco de Falha por Desgaste Erosivo de Tubulações Curvas de Aço-carbono por Meio de Simulação numérica e Metamodelo Gerado por Superfície de Resposta.		
+	\end{minipage}}
+	\end{center}
+\end{fichacatalografica}
+% ---
+
+% ---
+% Inserir errata
+% ---
+% \begin{errata}
+% Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
+
+% \vspace{\onelineskip}
+
+% FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
+% reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
+% rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
+% cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
+% Zootecnia, Universidade de São Paulo, São Paulo, 2011.
+
+% \begin{table}[htb]
+% \center
+% \footnotesize
+% \begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
+%   \hline
+%   \textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
+%     \hline
+%     1 & 10 & auto-conclavo & autoconclavo\\
+%   \hline
+% \end{tabular}
+% \end{table}
+
+% \end{errata}
+% ---
+
+% ---
+% Inserir folha de aprovação
+% ---
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \includepdf{folhadeaprovacao_final.pdf}
+%
+\begin{folhadeaprovacao}
+
+
+\begin{center}
+     {\large \imprimirautor}\\
+       	\vspace{2cm}	
+    \begin{DoubleSpace}    
+    {\large \textbf{\MakeUppercase{\imprimirtitulo}}} \\
+    {\large \textbf{\MakeUppercase{\imprimirsubtitulo}}}
+    \end{DoubleSpace}
+		\vspace{1cm}
+        
+\end{center}		
+
+
+\begin{flushright} 
+    \parbox{0.6\linewidth}{
+		\imprimirtipotrabalho~apresentada ao Programa de Pós-Graduação em Engenharia de Minas, Metalúrgica e de Materiais da \imprimirinstituicao~ como parte dos
+		requisitos necessários para a obtenção do grau de Mestre em Ciência e tecnologia dos Materiais.\\}
+   \end{flushright} 
+
+\noindent Trabalho aprovado em \imprimirlocal, \imprimirdata. 
+
+\begin{center}
+\vfill
+       \rule{10cm}{.1pt} \\
+       {\imprimirorientador} \\ Universidade Federal do Rio Grande do Sul \\
+			 Orientador 
+       \vfill
+       \rule{10cm}{.1pt} \\
+       Prof. Dr. Marco Antônio Durlo Tier \\ Universidade Federal do Pampa \\
+			  Examinador 
+       \vfill
+       \rule{10cm}{.1pt} \\
+       Dr. Lúcio de Abreu Corrêa \\ Universidade Federal do Rio Grande do Sul \\
+			 Examinador 
+       \vfill
+       \rule{10cm}{.1pt} \\
+      Dr. Toni Roger Schifelbain de Lima \\ Universidade Federal do Rio Grande do Sul \\
+			 Examinador 
+       \vfill
+  \end{center}
+\end{folhadeaprovacao}
+% ---
+
+
+
+% ---
+% Agradecimentos
+% ---
+\begin{agradecimentos}
+
+Dedico esse trabalho aos meus pais Gelson Cláudio e Ana Nélia e aos meus irmãos Pedro Henrique e Victor Hugo. Agradeço os meus tios Jair Antônio, Márcia Rejane e Daisy Cirilo que sempre me apoiaram durante toda minha trajetória acadêmica. Agradeço imensamente a minha companheira de vida Jéssica Haylla por todo carinho amor e dedicação.
+
+Ademais, agradeço aos meus orientadores Prof. Dr. Marcelo Favaro Borges e Dr. Vinicius Ribeiro Machado da Silva, pela substancial contribuição para a elaboração e execução deste trabalho. Gostaria de agradecer ao Laboratório de Metalurgia Física (LAMEF), por todo seu apoio físico e técnico. Minha sincera gratidão aos colegas de laboratório, em especial ao Luiz Francisco Rodrigues Venturini, Guilherme Pilotto Montagna, Tayron Zilli Stapasolla, João Júnior Lopês e Matias Seyboth. 
+
+
+
+\end{agradecimentos}
+
+
+\begin{epigrafe}
+	\vspace*{\fill}
+	\begin{flushright}
+		\textit{“A persistência é o menor caminho do êxito”. \\(Charles Chaplin)}
+	\end{flushright}
+\end{epigrafe}
+
+% ---
+
+% ---
+% RESUMOS
+% ---
+
+% resumo em português
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+
+\SingleSpacing KERN, J.G.C. ~{\bfseries \rmfamily \fontsize{12}{12} \imprimirtitulo} \imprimirdata. \thelastpage p. \imprimirtipotrabalho – Programa de Pós-Graduação em Engenharia de Minas, Metalúrgica e de Materiais (PPGE3M), \imprimirinstituicao, \imprimirlocal.
+
+A etapa de perfuração de poços de petróleo está associada a grandes riscos em função de diversas fontes de incertezas provenientes das condições operacionais, geológicas e econômicas. A falha de equipamentos utilizados na perfuração de poços petrolíferos pode representar sérios danos ambientais, econômicos e à vida humana. Um modo de falha presente em projetos petrolíferos é causado pelo desgaste erosivo, que é um fenômeno proveniente do impacto de partículas sobre as camadas dos materiais utilizados nas operações. Através do avanço da tecnologia computacional, é possível a aplicação de simulação fluidodinâmica numérica para modelagem de fenômenos físicos e previsão quantitativa do desgaste erosivo sob condições complexas de escoamento de fluidos. Dentro desta perspectiva, o objetivo principal desse trabalho é o desenvolvimento de uma metodologia para
+analisar o risco de falha por desgaste erosivo de tubulações curvas utilizadas em perfuração de
+poços petrolíferos, através da aplicação subsidiária de planejamento estatístico com intuito
+de diminuir o tempo computacional, com confiabilidabe estatística dos resultados. Na metodologia proposta neste estudo, a análise de risco é focada na geração de cenários de fluxo, compostos pela combinação dos atributos aleatórios que influenciam no Desgaste erosivo. Embora haja semelhanças metodológicas com estudos anteriores para estimativas de risco \cite{loschiavo},\cite{steagall}, \cite{santoss2}, é importante ressaltar que este estudo aborda uma área distinta, com foco na análise de falha durante a perfuração de poços. Isso contribui para o avanço do conhecimento e a aplicação de métodos de estimativa de risco em um novo contexto, com potenciais benefícios para a indústria de perfuração. A quantificação de risco de falha é realizada pelas técnicas de Árvore de Derivação e Monte Carlo com objetivo de compará-las. Porém, a depender do número de atributos analisados e a quantidade de sorteios requerida pelos diferentes métodos abordados, o tempo e esforço computacional necessário para execução das simulações pode ser inviável. Portanto, é proposto o desenvolvimento de metamodelos através de Planejamento estatístico por Superfície de resposta para substituição do simulador numérico. Os resultados demonstram similitude entre as técnicas de Árvore de Derivação e Monte Carlo na obtenção da probabilidade de risco de falha por erosão para as variáveis aleatórias analisadas. O metamodelo gerado por Superfície de resposta aplicado neste trabalho demonstrou resultados satisfatórios para previsão do desgaste erosivo com confiabilidade estatística, capacidade preditiva e redução do tempo computacional de simulação para previsão do Desgaste erosivo. A utilização do metamodelo diminuiu em 69\% as simulações totais para o método de Árvore de Derivação e foi essencial para o método de Monte Carlo em função do grande número de cenários de previsão (301.100) requeridos pela técnica. 
+
+
+% O resumo deve ressaltar o
+%  objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
+
+
+
+ \textbf{Palavras-chave}: Desgaste erosivo, Perfuração de poços, Simulação fluidodinâmica computacional, Análise de risco, Árvore de Derivação e Monte Carlo, Planejamento estatístico, Superfície de resposta, Metamodelos.
+\end{resumo}
+
+% resumo em inglês
+\begin{resumo}[Abstract]
+\SingleSpacing KERN, J.G.C. ~{\bfseries \rmfamily \fontsize{12}{12} \imprimirtitulo} \imprimirdata. \thelastpage p. \imprimirtipotrabalho – Programa de Pós-Graduação em Engenharia de Minas, Metalúrgica e Materiais (PPGE3M), \imprimirinstituicao, \imprimirlocal.
+ \begin{otherlanguage*}{english}
+ 
+The oil drilling well stage is associated with great risks from operating conditions, geological uncertainty
+and economic uncertainty. The failure of equipment used in oil drilling wells can
+represent serious environmental, biological and human life damage. A failure mode
+recurring in oil projects is caused by erosive wear, which is a phenomenon
+provided by the impact of particles on the layers of materials used in industry. Through the advancement of computational technology, it is possible to apply
+numerical fluid dynamics simulation for modelling physical phenomena and predictions
+quantitative assessment of erosive wear under complex fluid flow conditions. Inside
+from this perspective, this work aims to carry out a risk analysis of failure by
+erosive wear. The proposed methodology of this study, the risk analysis focuses on generating flow scenarios, composed of the combination of random attributes that influence Erosive Wear. Although there are methodological similarities with previous studies on economic risk estimation \cite{loschiavo},\cite{steagall}, \cite{santoss2}, it is important to emphasize that this study addresses a distinct area, with a focus on failure analysis during drilling. This contributes to the advancement of knowledge and the application of risk estimation methods in a new context, with potential benefits for the drilling industry. These methodologies aim to combine random attributes that influence the quantification of erosive wear. However, depending on the number of attributes analyzed, the time and computational effort required for the execution
+of the simulations may be unfeasible for composing the risk curve. Therefore, it is proposed
+the development of metamodels through statistical planning by Response Surface methodology to replace the numeric simulator. The results showed similarity
+between Derivation Tree and Monte Carlo techniques in obtaining the probability of
+risk of failure. The metamodel generated by
+Response Surface methodology applied in this work tested results achieved for the
+prediction of erosive wear and followed in 69\% as total simulations for the method of
+Derivation tree and an option for the Monte Carlo method, which in turn
+demands many forecasting scenarios.
+   
+
+   \vspace{\onelineskip}
+ 
+   \noindent 
+   \textbf{Keywords}: Erosive wear, Well drilling, Computational Fluid Dynamics , Risk analysis, Derivation tree and Monte Carlo, Statistical planning, Response surface, Metamodels, Surrogated Models.
+ \end{otherlanguage*}
+\end{resumo}
+
+
+
+% ---
+% inserir lista de ilustrações
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+\begin{siglas}
+\item[ABNT] Associação Brasileira de Normas Técnicas
+\item[AD] Árvore de Derivação
+\item[ANOVA] Análise de Variância (analysis of variance)
+\item[ANP] Agência Nacional de Petróleo
+\item[API] American Petroleum Institute
+\item[CAD] Desenho Assistido em Computador
+\item[CFD] Simulação Fluidodinâmica Computacional
+\item[COV] Coeficiente de Variação
+\item[DOE] Design de Experimentos
+\item[FDP] Função de Densidade de Probabilidade (FDP)
+\item[FLUENT] Código do Desenvolvedor Ansys para CFD
+\item[FO] Função-objetivo
+\item[GL] Graus de Liberdade 
+\item [MC] Monte Carlo
+\item[ML] Aprendizado de Máquina
+\item[MVF] Método dos Volumes Finitos
+\item[QM] Quadrados Médios
+\item[RSM] Metodologia de Superfície de Resposta (Response Surface
+Methodology)
+\item[SIM] Simulação 
+\item[SQ] Soma de Quadrados
+\item[SR] Superfície de Resposta
+
+
+
+\end{siglas}
+% ---
+
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+
+%% ------------- Capítulos ----------------------%%
+\pagenumbering{arabic} \setcounter{page}{1}
+\textual 
+\include{Capitulos/Cap1-Introducao}
+\include{Capitulos/Cap2-Fundamentacao}
+\include{Capitulos/Cap3-Revisaobibliografica}
+\include{Capitulos/Cap4-Metodologia}
+\include{Capitulos/Cap5-Aplicacao}
+\include{Capitulos/Cap6-Resultados}
+\include{Capitulos/Cap7-Conclusao}
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{abntex2-modelo-references}
+
+\end{document}

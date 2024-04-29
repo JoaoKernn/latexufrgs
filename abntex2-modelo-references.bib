@@ -1,0 +1,994 @@
+@article{Afzal2020,
+abstract = {Experimental analysis of base pressure in suddenly expanded compressible flow from nozzles at different Mach numbers is performed. Intensive experimentation is carried out to investigate the base pressure and wall pressure of flow expanding from the nozzles into the enlarged duct. Microjets to actively control the flow are adopted to increase the base pressure. Experiments were conducted for Mach numbers (one sonic and rest supersonic) from 1 to 3, nozzle pressure ratio (NPR) from 3 to 11. The duct length considered from 10 to 1, and the area ratios tested were from 2.56 to 6.25 are the variables whose effect on base and wall pressure is studied using response surface methodology. The K-means algorithm performs a clustering analysis of this enormous data, which provides useful information and patterns. Regression of both the pressures using a random forest classification algorithm is carried out. The response surface analysis reveals that microjets are efficient when the flow is under the influence of a favorable pressure gradient. The base pressure reduces from maximum to minimum when the flow regime changes from over to correct expansion by increasing the NPR. Lower area ratio and higher duct length have a minimum effect on base pressure. The wall pressure flow field is unaffected due to the presence of the microjets. K-means clustering revealed that a high percentage of base pressure is in the lower range. This necessitates the importance of increasing the base pressure to reduce the base drag. Random forest algorithm has proved to be a handy tool for predicting base pressure and wall pressure and similar highly non-linear data.},
+author = {Afzal, Asif and Aabid, Abdul and Khan, Ambareen and {Afghan Khan}, Sher and Rajak, Upendra and {Nath Verma}, Tikendra and Kumar, Rahul},
+doi = {10.1016/j.ast.2020.106318},
+file = {:C\:/Users/joaokern/Downloads/1-s2.0-S1270963820310002-main.pdf:pdf},
+issn = {12709638},
+journal = {Aerospace Science and Technology},
+keywords = {Clustering,Flow expansion,Mach,Nozzle,Random forest,Response surface},
+pages = {106318},
+publisher = {Elsevier Masson SAS},
+title = {{Response surface analysis, clustering, and random forest regression of pressure in suddenly expanded high-speed aerodynamic flows}},
+url = {https://doi.org/10.1016/j.ast.2020.106318},
+volume = {107},
+year = {2020}
+}
+
+@article{breiman,
+author = {Breiman, L},
+year = {2001},
+month = {10},
+pages = {5-32},
+title = {Random Forests},
+volume = {45},
+journal = {Machine Learning},
+doi = {10.1023/A:1010950718922}
+}
+
+@article{box,
+  title={Some new three level designs for the study of quantitative variables},
+  author={Box, George EP and Behnken, Donald W},
+  journal={Technometrics},
+  volume={2},
+  number={4},
+  pages={455--475},
+  year={1960},
+  publisher={Taylor \& Francis}
+}
+
+
+@article{mackay,
+ ISSN = {00401706},
+ URL = {http://www.jstor.org/stable/1268522},
+ abstract = {Two types of sampling plans are examined as alternatives to simple random sampling in Monte Carlo studies. These plans are shown to be improvements over simple random sampling with respect to variance for a class of estimators which includes the sample mean and the empirical distribution function.},
+ author = {M. D. McKay and R. J. Beckman and W. J. Conover},
+ journal = {Technometrics},
+ number = {2},
+ pages = {239--245},
+ publisher = {[Taylor & Francis, Ltd., American Statistical Association, American Society for Quality]},
+ title = {A Comparison of Three Methods for Selecting Values of Input Variables in the Analysis of Output from a Computer Code},
+ urldate = {2022-12-01},
+ volume = {21},
+ year = {1979}
+}
+
+@book{hammers,
+  title={Monte Carlo Methods},
+  author={Hammersley, J.M. and Handscomb, D.C.},
+  isbn={9780416523409},
+  lccn={lc64009290},
+  series={Methuen's monographs on applied probability and statistics},
+  url={https://books.google.com.br/books?id=Kk4OAAAAQAAJ},
+  year={1964},
+  publisher={Methuen}
+}
+
+
+@proceedings{Srikanta,
+    author = {Schuetter, Jared  and Mishra, Srikanta },
+    title = "{Experimental Design or Monte Carlo Simulation? Strategies for Building Robust Surrogate Models}",
+    volume = {Day 3 Wed, September 30, 2015},
+    series = {SPE Annual Technical Conference and Exhibition},
+    year = {2015},
+    month = {09},
+    abstract = "{The use of statistical modeling and machine learning techniques to replace computationally expensive simulation models with an equivalent “proxy” or “surrogate” model is becoming commonplace in petroleum reservoir modeling. The traditional approach is to use a classical experimental design such as the Box-Behnken (BB) design, with results fitted to a quadratic response surface. An alternative is to use a Latin Hypercube sampling (LHS) based design in a Monte Carlo simulation framework, with results fitted using some advanced regression technique such as multidimensional kriging. A comparative understanding of the pros and cons of each of these methods does not appear to have been addressed in detail in the literature. This study seeks to evaluate each of these approaches (and variants thereof) for a common problem and discuss strategies for building surrogate models with robust predictive ability.The example problem studied here involves compositional simulation of supercritical CO2 into a deep saline formation consisting of a layered reservoir-caprock system with no-flow boundaries. The nine uncertain parameters of interest are: reservoir and caprock thickness/permeability/porosity, permeability anisotropy ratio, CO2 injection rate, and indicator for permeability layering. A 97-run BB design is chosen for the classical experimental design, and a 97-run Maximin (MM) LHS design is used for the Monte Carlo simulation. In addition, we use a 79-run Augmented Pairs (AP) design as an alternative to the BB design, and a 97-run Maximum Entropy (ME) design as an alternative to the MM design. CO2 injection is simulated for 30 years, with maximum extent of the CO2 plume extent, total storage efficiency and average pressure buildup in the reservoir taken to be the performance metrics of interest.Predictive models for these metrics are built using a quadratic polynomial model with a LASSO variable selection scheme for the BB and AP designs, and using multidimensional kriging for the MM and ME designs. In addition, the predictive ability of each design-model combination is examined using an independent data set and a k-fold cross-validation strategy. The latter involves splitting the data into a training set and a test set, building regression model on the training set and validating it with the test set. Repeated application of this procedure yields valuable information regarding the robustness of each regression modeling approach. For the problem of interest, we find that the MM design with a kriging or a quadratic model performs best from a cross-validation standpoint (not just from fitting the entire training data set, which could result in overfitting and biased predictions). We also examine the benefits of first applying screening of the uncertain parameters using a Plackett-Burman type design and then building a 13-run BB design only with the “heavy hitters”. Our results suggest that such a model does not have a robust predictive ability compared to the full 97-run BB design, especially under k-fold cross-validation.The main contributions of this paper are to provide insights on the comparative performance of experimental design and Monte Carlo type approaches (and variants thereof) for building surrogate models, and also to demonstrate the utility of cross-validation for improving model predictive ability.}",
+    doi = {10.2118/174905-MS},
+    url = {https://doi.org/10.2118/174905-MS},
+    note = {D031S030R005},
+    eprint = {https://onepetro.org/SPEATCE/proceedings-pdf/15ATCE/3-15ATCE/D031S030R005/1379244/spe-174905-ms.pdf},
+}
+
+
+@article{Zhang,
+title = {Wellbore temperature distribution during circulation stage when well-kick occurs in a continuous formation from the bottom-hole},
+journal = {Energy},
+volume = {164},
+pages = {964-977},
+year = {2018},
+issn = {0360-5442},
+doi = {https://doi.org/10.1016/j.energy.2018.09.048},
+url = {https://www.sciencedirect.com/science/article/pii/S0360544218318127},
+author = {Zheng Zhang and Youming Xiong and Yun Gao and Liming Liu and Menghao Wang and Geng Peng},
+keywords = {Wellbore temperature, Well kick, Transient heat transfer model, Circulation stage},
+abstract = {In the exploration and development of deep reservoir resources, the occurrence of well kick will have a very important impact on wellbore temperature distribution during circulation. This study aims to investigate the wellbore temperature distribution during circulation when well kick occurs in a continuous formation from the bottom-hole. A transient temperature model was established by the first law of thermodynamics. The finite volume method was used to discretize the model and the under-relaxation iterative method was used for numerical calculation. The validity of the model has been verified by the previous typical models and actual measured temperatures. The calculation results showed that the highest temperature of annulus fluid was at the bottom-hole and annulus fluid temperature increased as the formation high-temperature fluid continuously enters the annulus when well kick occurred. The occurrence of well kick led to a significant increase in outlet fluid temperature and bottom-hole fluid temperature. The occurrence of well kick changed the formation radial temperature distribution and the temperature difference distribution between the annulus fluid and the drilling fluid inside the drill string. The flow rate of the well kick and the location of the well kick occurred also had an important impact on wellbore temperature distribution.}
+}
+
+
+
+
+@article{myers,
+author = {Myers, R.H. and Montgomery, D.C. and Anderson-Cook, Christine},
+year = {2016},
+month = {01},
+pages = {},
+title = {Response Surface Methodology: Process and Product Optimization Using Designed Experiments},
+volume = {705}
+}
+
+@phdthesis{risso1,
+  title={Ajuste de historico utilizando planejamento estatistico e combinação de dados de produção, pressão e mapas de saturação},
+  author={Valmir Francisco Risso},
+  year={2007},
+  school={Universidade Estadual de Campinas, Faculdade de Engenharia Mecanica e Instituto de Geociencias}
+}
+
+
+@phdthesis{loschiavo,
+  title={Estimativa de Incertezas na Previsão de Desempenho de Reservatórios},
+  author={Roberto Loschiavo},
+  year={1999},
+  school={Faculdade de Engenharia Mecânica da Unicamp}
+}
+
+@phdthesis{steagall,
+  title={Análise de Risco nas Previsões de Produção com
+Simulação Numérica de Fluxo – Exemplo de um
+Campo na Fase de Delimitação},
+  author={Daniel Escobar Steagall},
+  year={2001},
+  school={Faculdade de Engenharia Mecânica da Unicamp}
+}
+
+@article{ANUR,
+title = {Slurry erosion: An overview},
+journal = {Materials Today: Proceedings},
+volume = {25},
+pages = {659-663},
+year = {2020},
+note = {2nd International Conference on Computational and Experimental Methods in Mechanical Engineering},
+issn = {2214-7853},
+doi = {https://doi.org/10.1016/j.matpr.2019.07.717},
+url = {https://www.sciencedirect.com/science/article/pii/S2214785319329323},
+author = { Anurag and Nitish Kumar and Shivam Mishra},
+keywords = {Slurry erosion, Settling slurry, Non-settling slurry, Microploughing, Microcutting},
+abstract = {The present paper reviews various studies related to Slurry Erosion, its implementation in real world and properties that effect the various operations that can be carried out using slurry erosion. The real world implementations of slurry erosion are limited and the processes that can lead to its expansion in the modern day industry have also been discussed in this paper. The limitations of slurry erosion have also been mentioned by taking examples from researches based on working of hydro turbines in Himalayan Region of India.}
+}
+
+@phdthesis{santoss2,
+  title={Determinação de Metodologia de Ajuste Automatizado de Histórico.
+Campinas},
+  author={José Pedro Moura dos Santos},
+  year={2002},
+  school={Faculdade de Engenharia Mecânica da Unicamp}
+}
+
+
+@phdthesis{iqbal2021,
+  title={Performance analysis of intrusion detection systems using the PyCaret machine learning library on the UNSW-NB15 dataset},
+  author={Iqbal, Faisal Bin and Biswas, Srijon and Urba, Rubabatul and others},
+  year={2021},
+  school={Brac University}
+}
+
+@phdthesis{madeira,
+  title={Comparação de Técnicas de Análise de Risco
+Aplicadas ao Desenvolvimento de Campos de
+Petróleo },
+  author={Marcelo Gomes Madeira},
+  year={2005},
+  school={UNIVERSIDADE ESTADUAL DE CAMPINAS
+FACULDADE DE ENGENHARIA MECÂNICA
+INSTITUTO DE GEOCIÊNCIAS}
+}
+
+@article{FERREIRA2007179,
+title = {Box-Behnken design: An alternative for the optimization of analytical methods},
+journal = {Analytica Chimica Acta},
+volume = {597},
+number = {2},
+pages = {179-186},
+year = {2007},
+issn = {0003-2670},
+doi = {https://doi.org/10.1016/j.aca.2007.07.011},
+url = {https://www.sciencedirect.com/science/article/pii/S0003267007011671},
+author = {S.L.C. Ferreira and R.E. Bruns and H.S. Ferreira and G.D. Matos and J.M. David and G.C. Brandão and E.G.P. {da Silva} and L.A. Portugal and P.S. {dos Reis} and A.S. Souza and W.N.L. {dos Santos}},
+keywords = {Box-Behnken design, Multivariate optimization, Experimental design, Analytical methods, Desirability function, Robustness},
+abstract = {The present paper describes fundamentals, advantages and limitations of the Box-Behnken design (BBD) for the optimization of analytical methods. It establishes also a comparison between this design and composite central, three-level full factorial and Doehlert designs. A detailed study on factors and responses involved during the optimization of analytical systems is also presented. Functions developed for calculation of multiple responses are discussed, including the desirability function, which was proposed by Derringer and Suich in 1980. Concept and evaluation of robustness of analytical methods are also discussed. Finally, descriptions of applications of this technique for optimization of analytical methods are presented.}
+}
+
+@book{montgomery,
+title   = {Design and Analysis
+of Experiments},
+author = {Douglas C. Montgomery},
+year = {2013},
+publisher = {Wiley}
+}
+
+
+@book{lemma,
+title   = {Planejamento de experimentos e otimização de processos: uma estratégia sequencial de planejamentos},
+author = {Rodrigues, Maria Isabel and Iemma, Antônio Francisco},
+year = {2005},
+publisher = {Casa do Pão}
+}
+
+
+
+@techreport{api14e,
+  author      = "API-RP-14E",
+  title       = "Recommended Practice for
+Design and Installation of
+Offshore Production Platform
+Piping Systems",
+  institution = "AMERICAN PETROLEUM INSTITUTE",
+  year        = "1991"
+}
+
+@article{elshawi2019,
+  title={Automated machine learning: State-of-the-art and open challenges},
+  author={Elshawi, Radwa and Maher, Mohamed and Sakr, Sherif},
+  journal={arXiv preprint arXiv:1906.02287},
+  year={2019}
+}
+
+@article{balaji2018,
+  title={Benchmarking automatic machine learning frameworks},
+  author={Balaji, Adithya and Allen, Alexander},
+  journal={arXiv preprint arXiv:1808.06492},
+  year={2018}
+}
+
+@article{yaman2018,
+  title={Comparison of random subspace and voting ensemble machine learning methods for face recognition},
+  author={Yaman, Mehmet Akif and Subasi, Abdulhamit and Rattay, Frank},
+  journal={Symmetry},
+  volume={10},
+  number={11},
+  pages={651},
+  year={2018},
+  publisher={MDPI}
+}
+
+@inproceedings{chen2016,
+  title={Xgboost: A scalable tree boosting system},
+  author={Chen, Tianqi and Guestrin, Carlos},
+  booktitle={Proceedings of the 22nd acm sigkdd international conference on knowledge discovery and data mining},
+  pages={785--794},
+  year={2016}
+}
+
+@article{polikar,
+  title={Ensemble based systems in decision making},
+  author={Polikar, Robi},
+  journal={IEEE Circuits and systems magazine},
+  volume={6},
+  number={3},
+  pages={21--45},
+  year={2006},
+  publisher={IEEE}
+}
+
+@book{james,
+  title={An introduction to statistical learning},
+  author={James, Gareth and Witten, Daniela and Hastie, Trevor and Tibshirani, Robert},
+  volume={112},
+  year={2013},
+  publisher={Springer}
+}
+
+@inproceedings{sbsi,
+ author = {Lucas Brunialti and Sarajane Peres and Valdinei Freire and Clodoaldo Lima},
+ title = {Aprendizado de Máquina em Sistemas de Recomendação Baseados em Conteúdo Textual: Uma Revisão Sistemática},
+ booktitle = {Anais do XI Simpósio Brasileiro de Sistemas de Informação},
+ location = {Goiânia},
+ year = {2015},
+ keywords = {},
+ issn = {0000-0000},
+ pages = {203--210},
+ publisher = {SBC},
+ address = {Porto Alegre, RS, Brasil},
+ doi = {10.5753/sbsi.2015.5818},
+ url = {https://sol.sbc.org.br/index.php/sbsi/article/view/5818}
+}
+
+
+@book{ROBINSON,
+title = {Chapter 1 - Historical Perspective and Introduction},
+editor = {ASME},
+booktitle = {Drilling Fluids Processing Handbook},
+publisher = {Gulf Professional Publishing},
+address = {Burlington},
+pages = {1-13},
+year = {2005},
+isbn = {978-0-7506-7775-2},
+doi = {https://doi.org/10.1016/B978-075067775-2/50002-0},
+url = {https://www.sciencedirect.com/science/article/pii/B9780750677752500020},
+author = {Leon Robinson}
+}
+
+@book{thomas,
+	Author = {José Eduardo Thomas},
+	Date-Added = {2012-04-23 11:34:20 +0000},
+	Date-Modified = {2012-04-23 11:34:20 +0000},
+	Publisher = {Editora Interciência},
+	Title = {Fundamentos de engenharia de petróleo},
+	Year = {2004}}
+	
+@proceedings{wang,
+    author = {Wang, J.  and Troshko, A.  and Buechler, S.  and Tavarez, F. },
+    title = "{Advanced Modeling of Well Tubulars Erosion by Solids Including Multiphase Effects}",
+    volume = {Day 1 Mon, November 09, 2015},
+    series = {Abu Dhabi International Petroleum Exhibition and Conference},
+    year = {2015},
+    month = {11},
+    abstract = "{Solids erosion of well tubulars can be a major factor impacting production rate limitations. It is well known that erosion rate is very sensitive to production rate. Thus, large uncertainty in erosion rate predictions can result in conservatism in lifetime erosion predictions. As a result, operators may unnecessarily reduce production rates due to fears of an erosional failure of the well tubulars.The best way to predict erosion is through experimental testing; however, in many cases experimental testing can be unrealistic prompting the use of various erosion predictive models to improve well design and production practices. Erosion is a complex phenomenon and even with the most comprehensive and accurate models based on Computational Fluid Dynamics (CFD) prediction of erosion rate is often only a ballpark estimates without proper validation. Furthermore, many wells produce both gas and liquid resulting in different multiphase flow regimes. The location of each phase in the flow stream can have a significant impact on erosion rates. For example, it is known that the presence of thin liquid films along tubular walls in gas flows can significantly reduce erosion rates. Thus, complex modeling of multiphase flow must be incorporated into erosion models in order to accurate capture erosion rates.This paper presents a comprehensive CFD-based model applicable to various well completion types. Our model incorporates solids erosion as well as various multiphase flow regimes. The model was validated extensively against experimental data and shown to improve on previously published erosion patterns and trends in terms of both erosional hot spot locations and erosional rates. This improved model can significantly reduce the uncertainty in solid erosion prediction for use in the selection, design and optimization of well tubulars and completion equipment (e.g. wire wrap screens and inflow control devices).}",
+    doi = {10.2118/177962-MS},
+    url = {https://doi.org/10.2118/177962-MS},
+    note = {D011S006R002},
+    eprint = {https://onepetro.org/SPEADIP/proceedings-pdf/15ADIP/1-15ADIP/D011S006R002/1341424/spe-177962-ms.pdf},
+
+}
+
+@article{Lih,
+author = {Li, Heng and Sarma, Pallav and Zhang, Dongxiao},
+year = {2011},
+month = {06},
+pages = {429-439},
+title = {A Comparative Study of the Probabilistic-Collocation and Experimental-Design Methods for Petroleum-Reservoir Uncertainty Quantification},
+volume = {16},
+journal = {SPE Journal - SPE J},
+doi = {10.2118/140738-PA}
+}
+
+@article{plackett,
+    author = {PLACKETT, R. L. and BURMAN, J. P.},
+    title = "{THE DESIGN OF OPTIMUM MULTIFACTORIAL EXPERIMENTS}",
+    journal = {Biometrika},
+    volume = {33},
+    number = {4},
+    pages = {305-325},
+    year = {1946},
+    month = {06},
+    issn = {0006-3444},
+    doi = {10.1093/biomet/33.4.305},
+    url = {https://doi.org/10.1093/biomet/33.4.305},
+    eprint = {https://academic.oup.com/biomet/article-pdf/33/4/305/604699/33-4-305.pdf},
+}
+
+
+
+@article{boxao,
+author = { G.   E. P.   Box  and  D. W.   Behnken },
+title = {Some New Three Level Designs for the Study of Quantitative Variables},
+journal = {Technometrics},
+volume = {2},
+number = {4},
+pages = {455-475},
+year  = {1960},
+publisher = {Taylor & Francis},
+doi = {10.1080/00401706.1960.10489912},
+URL = {https://www.tandfonline.com/doi/abs/10.1080/00401706.1960.10489912},
+eprint = {https://www.tandfonline.com/doi/pdf/10.1080/00401706.1960.10489912  }}
+
+
+@article{WANG,
+title = {Numerical investigation of the erosion behavior in elbows of petroleum pipelines},
+journal = {Powder Technology},
+volume = {314},
+pages = {490-499},
+year = {2017},
+note = {Special Issue on Simulation and Modelling of Particulate Systems},
+issn = {0032-5910},
+doi = {https://doi.org/10.1016/j.powtec.2016.12.083},
+url = {https://www.sciencedirect.com/science/article/pii/S0032591016309573},
+author = {Kai Wang and Xiufeng Li and Yueshe Wang and Renyang He},
+keywords = {Mathematical model, Multiphase flow, Elbows, Erosion behavior},
+abstract = {Oil spill caused by the erosion in elbows is widely encountered in long-distance crude oil transmission pipelines and will lead to a considerable economic loss and potential safety hazards. In order to prevent the equipment failure and evaluate the campaign life of piping systems, there exists an urgent need to identify the positions suffering severe erosion damage and predict the erosion rate in pipelines for multiphase flow. In this study, a mathematical model is established to predict the solid particle erosion in the elbows of petroleum pipelines, in which the particle-fluid interaction is taken into account. The effects of bend orientation and particle properties on the erosion process are investigated in details. In order to understand the erosion mechanism related with the dynamic behavior of flow fluid and entrained particles, the relationship between the secondary flows and the particle trajectories is analyzed emphatically. The results indicate that erosion mainly occurs in the regions near the elbow exit, especially the side walls of the downstream straight pipe and extrados of the bend section. However, erosion on the side walls could not always happen when the effect of the secondary flows is not remarkable. It is also found that the erosion behavior depends upon both the centrifugal effect of pipe flow and the forces acting on particles. Finally, an erosion pattern based on Stokes number is developed to quantify the complex coupled effects of the flow field and particle properties.}
+}
+
+
+@proceedings{yeten,
+    author = {Yeten, B. and Castellini, A. and Guyaguler, B. and Chen, W. H.},
+    title = "{A Comparison Study on Experimental Design and Response Surface Methodologies}",
+    volume = {All Days},
+    series = {SPE Reservoir Simulation Conference},
+    year = {2005},
+    month = {01},
+    abstract = "{Experimental design method is an alternative to traditional sensitivity analysis. The basic idea behind this methodology is to vary multiple parameters at the same time so that maximum inference can be attained with minimum cost. Once the appropriate design is established and the corresponding experiments (simulations) are performed, the results can be investigated by fitting them to a response surface. This surface is usually an analytical or a simple numerical function which is cheap to sample. Therefore it can be used as a proxy to reservoir simulation to quantify the uncertainties.Designing an efficient sensitivity study poses two main issues: Designing a parameter space sampling strategy and carrying out experiments.Analyzing the results of the experiments. (Response surface generation)In this paper we investigate these steps by testing various experimental designs and response surface methodologies on synthetic and real reservoir models.We compared conventional designs such as Plackett-Burman, central composite and D-optimal designs and a space filling design technique that aim at optimizing the coverage of the parameter space. We analyzed these experiments using linear, second order polynomials and more complex response surfaces such as kriging, splines and neural networks. We compared these response surfaces in terms of their capability to estimate the statistics of the uncertainty (i.e., P10, P50 and P90 values), their estimation accuracy and their capability to estimate the influential parameters (heavy-hitters). Comparison with our exhaustive simulations showed that experiments generated by the space filling design and analyzed with kriging, splines and quadratic polynomials gave the greatest accuracy while traditional designs and the associated response surfaces performed poorly for some of the cases we studied. We also found good agreement between polynomials and complex response surfaces in terms of estimating the effect of each parameter on the response surface.}",
+    doi = {10.2118/93347-MS},
+    url = {https://doi.org/10.2118/93347-MS},
+    note = {SPE-93347-MS},
+    eprint = {https://onepetro.org/spersc/proceedings-pdf/05RSS/All-05RSS/SPE-93347-MS/2863977/spe-93347-ms.pdf},
+}
+
+
+
+@proceedings{slotte,
+    author = {Slotte, P. A. and Smørgrav, E.},
+    title = "{Response Surface Methodology Approach for History Matching and Uncertainty Assessment of Reservoir Simulation Models}",
+    volume = {All Days},
+    series = {SPE Europec featured at EAGE Conference and Exhibition},
+    year = {2008},
+    month = {06},
+    abstract = "{We present theory and application of a new approach for assisted history matching and uncertainty assessment. In a Bayesian framework the a priori geological information is conditioned to the production history to give the posterior probability distribution function (pdf). The full posterior pdf is explored to assess the uncertainty through ensembles of reservoir models sampled by a Markov chain Monte Carlo algorithm. To achieve this we construct proxy functions for the output of the flow simulator for all measurements that enter a global objective function. The proxy functions are constructed using polynomials and multi dimensional kriging. An iterative loop, in which ensembles of reservoir models are sampled from the posterior pdf, is run to improve the quality of the proxy functions.The power of the application is demonstrated on two reservoir models. First we apply the method on a synthetic case. A modified reservoir simulation model from a small StatoilHydro operated oil field is investigated with a synthetic production history and 20 tuning parameters. Finally we apply the method to the StatoilHydro operated Heidrun field. A model which covers the upper formations of the field with 26 production wells, 11 injector wells, and 56 tuning parameters is conditioned to 11 years of production history. We show that it is possible to construct proxy functions accurate enough to describe the full posterior pdf and thereby assess the uncertainty associated with these reservoir models.}",
+    doi = {10.2118/113390-MS},
+    url = {https://doi.org/10.2118/113390-MS},
+    note = {SPE-113390-MS},
+    eprint = {https://onepetro.org/SPEEURO/proceedings-pdf/08EURO/All-08EURO/SPE-113390-MS/2746226/spe-113390-ms.pdf},
+}
+
+@incollection{reology,
+title = {Chapter 6 - The Rheology of Drilling Fluids},
+editor = {Ryen Caenn and H.C.H. Darley and George R. Gray},
+booktitle = {Composition and Properties of Drilling and Completion Fluids (Seventh Edition)},
+publisher = {Gulf Professional Publishing},
+edition = {Seventh Edition},
+address = {Boston},
+pages = {151-244},
+year = {2017},
+isbn = {978-0-12-804751-4},
+doi = {https://doi.org/10.1016/B978-0-12-804751-4.00006-7},
+url = {https://www.sciencedirect.com/science/article/pii/B9780128047514000067},
+author = {Ryen Caenn and H.C.H. Darley and George R. Gray},
+keywords = {Newtonian, Bingham plastic, power law, yield power law, yield stress, LSRV, LSRYP, effective viscosity, viscosity profile, consistency curves, rheograms}
+}
+
+@article{damsleth,
+    author = {Elvind, Damsleth and Asmund, Hage and Rolf, Volden},
+    title = "{Maximum Information at Minimum Cost: A North Sea Field Development Study With an Experimental Design}",
+    journal = {Journal of Petroleum Technology},
+    volume = {44},
+    number = {12},
+    pages = {1350-1356},
+    year = {1992},
+    month = {12},
+    abstract = "{Statistical design of experiments is a technique to maximize the information obtained from a minimum number of experiments. This technique, however, has not been used extensively in the oil industry. With a well-designed setup, the same information obtained when one parameter is varied at a time can be obtained with significantly fewer simulation runs. Interactions among the various input parameters can be identified and estimated with a more elaborate design. The technique can be applied without profound statistical insight with commercially available packages for statistical analysis.In the evaluation and planning of a reservoir development, the common approach is to build the expected geological model with the most representative set of dynamic parameters and the best set of well locations. The platform and production facilities are optimized for this model. This combination of geological model, dynamic parameters, and technical design constitutes the base or reference case. A reservoir simulation is then performed, giving the base-case production profile and recovery factor. Finally, this production profile is combined with a fixed scenario for future oil and/or gas prices and investments to obtain the economic indicators [net present value (NPV) and return on investment (ROI)] for the project. Fig. 1 shows the different elements of this procedure.Most factors in this process are uncertain. The geological model is wrong, the dynamic parameters are incorrect, the well locations and facilities are not optimal, and the price scenario certainly will not be fulfilled. Thus, only one thing is certain: the results from the base-case calculations are definitely wrong. To evaluate how the various parameters that enter the process influence the results, a sensitivity study usually is performed. The standard approach is to vary one parameter at a time, keeping all other parameters at the base-case value. Two runs (with an optimistic and a pessimistic setting) are required for most parameters.The number of runs required for a full sensitivity study quickly becomes prohibitive. Fig. 1 gives an example (somewhat exaggerated) for a North Sea gas field and shows the sensitivities of potential interest. If there are 5 gas-sales scenarios, 5 handling capacities, 5 different numbers of wells, 2 different horizontal-well lengths, 2 vertical start positions, and 15 geological parameters with uncertainties of interest, it will take 15,500 simulations to investigate these sensitivities by varying one parameter at a time. Because a single run of this particular full-field reservoir model takes some 20 CPU hours on a Cray, the study would take about 40 years and would be finished just a few years before the scheduled field shutdown. Thus, any technique that can reduce the number of runs required will be very useful.If two or more parameters differ from their base-case values simultaneously, the effect on production may differ from the cumulative effect of varying one parameter at a time. The effect of varying several parameters simultaneously cannot be investigated by varying one parameter at a time. Thus, a technique that can shed some light on these simultaneous effects will be of value.In experimental design, several parameters are varied simultaneously according to a predefined pattern. With this technique, the same information as that obtained with the one-parameter-at-a-time method can be developed with significantly fewer simulation runs. Some understanding of the possible interactions among parameters also can be obtained.The theory behind experimental design was developed in the 1920's for agricultural applications. Box et al.1 present a basic but more modern reference, while Ross2 presents the topic within the framework of modern Japanese ideas about quality control. Sacks et al.3 introduce experimental design to computer experiments, and Morris4 extends their ideas. Experimental design has not been applied widely in the petroleum industry. Sawyer et al.5 is a very early reference, and Chu6 shows a recent application. Egeland et al.7 extend the ideas presented here.This paper presents the basic concepts of experimental design. The technique then is applied to a real case study from the North Sea, illustrating that it is possible to obtain the basic sensitivities with a minimum number of simulations and additional information about possible interaction effects from a few more runs. The results from the analysis also can be used as input to a simple Monte Carlo simulation to obtain approximate uncertainty ranges for the parameters under study. Øvreberg et al.8 present the context for such an analysis.}",
+    issn = {0149-2136},
+    doi = {10.2118/23139-PA},
+    url = {https://doi.org/10.2118/23139-PA},
+    eprint = {https://onepetro.org/JPT/article-pdf/44/12/1350/2223091/spe-23139-pa.pdf},
+}
+
+
+
+
+
+
+
+@article{zang,
+author = {Zangl, Georg and Graf, Thomas and Al-Kinani, Andreas},
+year = {2006},
+month = {06},
+pages = {},
+title = {Proxy Modeling in Production Optimization},
+doi = {10.2118/100131-MS}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@book{rocha2016projetos,
+  title={Projetos de Poços de Petróleo: Geopressões e Assentamento de Colunas de Revestimento},
+  author={Luiz Alberto Santos Rocha, Cecilia Toledo Azevedo},
+  isbn={9788571934306},
+  url={https://books.google.com.br/books?id=UNKpcQAACAAJ},
+  year={2016},
+  publisher={INTERCIENCIA}
+}
+
+
+@inproceedings{liuuh,
+author = {Liu, Xijie and Yap, yit fatt and Ainane, Sami},
+year = {2018},
+month = {06},
+pages = {81-84},
+title = {CFD Modeling of Erosion in Gas-Solid and Liquid-Solid Flows},
+doi = {10.1190/RDP2018-41921364.1}
+}
+
+@inproceedings{yuhan,
+author = {Yuan, Peng and Yu, Bo and Solomon, Herlene and Zhang, Hao and Stevens, John and Mezzatesta, Alberto and Gonuguntla, Praveen},
+year = {2017},
+month = {03},
+pages = {},
+title = {Erosion of Mud Pulse Telemetry Tools: Numerical Simulation and Field Studies},
+doi = {10.2118/183823-MS}
+}
+
+@inproceedings{Parsi,
+author = {Parsi, Mazdak and Kara, Mustafa and Sharma, Partha and McLaury, Brenton and Shirazi, Siamack},
+year = {2016},
+month = {05},
+pages = {},
+title = {Comparative Study of Different Erosion Model Predictions for Single-Phase and Multiphase Flow Conditions},
+doi = {10.4043/27233-MS}
+}
+
+@book{dnv,
+  title={Recommended Practice, RP O501: Erosive Wear in Piping Systems},
+  author={DNV},
+  url={https://books.google.com.br/books?id=aC7nSAAACAAJ},
+  year={2007},
+  publisher={Det Norske Veritas}
+}
+
+@article{finnie,
+title = {Erosion of surfaces by solid particles},
+journal = {Wear},
+volume = {3},
+number = {2},
+pages = {87-103},
+year = {1960},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/0043-1648(60)90055-7},
+url = {https://www.sciencedirect.com/science/article/pii/0043164860900557},
+author = {Iain Finnie},
+abstract = {The amount of surface material eroded by solid particles in a fluid stream depends on the conditions of fluid flow and on the mechanism of material removal. The paper first discusses some aspects of the fluid flow conditions which may lead to erosion and then analyses the mechanism of material removal for ductile and brittle materials. For ductile materials it is possible to predict the manner in which material removal varies with the direction and velocity of the eroding particles. The numerical magnitude of the erosion cannot be predicted with accuracy but does correlate with data from metal cutting tests. For brittle materials the conditions leading to initial cracking are deduced and ways of predicting the material removal are discussed. It was not found possible to develop an analysis as detailed as that for ductile materials. In addition, the influence of the properties of the abrasive particle on erosion is briefly considered.
+Zusammenfassung
+Die Erosion von Oberflächen, durch feste Teilchen in einer strömenden Flüssigkeit, hängt von den Bedingungen des Fliessens und von der Mechanik des Abtrennens des Materials ab. Zunächst werden einige Gesichtspunkte der Fliessbedingungen, die zu Erosion führen können, besprochen, dann wird eine Analyse der Mechanik des Abtrennens für plastisches und sprödes Material gegeben. Für plastisch deformierbares Material kann die Änderung des Trennprozesses als Funktion der Richtung und Geschwindigkeit erodierender Teilchen vorausgesagt werden. Der Zahlenwert der Erosion ist nicht genau vorauszuberechnen jedoch besteht eine Beziehung zu den Messergebnissen, die beim Abdrehen von Metallen erhalten wurden. Bedingungen die zur anfänglichen Rissbildung von spröden Materialien führen werden abgeleitet und Wege, um die Abtrennung vorauszusagen, werden besprochen. Jedoch erwies sich eine ebenso eingehende Analyse wie für plastisch deformierbare Materialien nicht als möglich. Schliesslich folgt eine kurze Betrachtung über den Einfluss der Teilcheneigenschaften auf den Erosionsvorgang.}
+}
+@article{oka,
+title = {Practical estimation of erosion damage caused by solid particle impact: Part 1: Effects of impact parameters on a predictive equation},
+journal = {Wear},
+volume = {259},
+number = {1},
+pages = {95-101},
+year = {2005},
+note = {15th International Conference on Wear of Materials},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/j.wear.2005.01.039},
+url = {https://www.sciencedirect.com/science/article/pii/S0043164805000979},
+author = {Y.I. Oka, Yoshida},
+keywords = {Estimation of erosion damage, Predictive equation, Solid particle impact, Impact parameters, Mechanical properties, Metallic materials},
+abstract = {A practical, predictive equation for estimating erosion damage caused by solid particle impact, which can be utilized under any impact conditions and for any type of material, is proposed. Impact parameters, which affect erosion mechanisms and damage to materials are the size, shape and properties of particles in addition to the important parameters of impact velocity and angle. The material parameters are mechanical properties such as material hardness. Correlative equations with erosion damage are generally derived from particle impact energy, but cannot be applied to the selection of suitable materials in practical service or for estimating erosion damage to newly developed materials. However, another correlative equation derived from indentation behavior, which relates to material hardness, is useful for this purpose of the estimation. The mechanical properties of a material can be therefore regarded as a key parameter for estimating erosion damage. The effects of impact parameters on the correlative equation were investigated in detail for several aluminum, copper, carbon steel and stainless steel specimens. The impact angle dependence of erosion damage to these materials was also discussed. It was concluded that material hardness was clearly an essential parameter and should be a dependent variable in terms of impact velocity dependence and impact angle dependence in the practical, predictive equations.}
+}
+
+@article{maclaury,
+    author = {McLaury, Brenton S.  and Shirazi, Siamack A. },
+    title = "{An Alternate Method to API RP 14E for Predicting Solids Erosion in Multiphase Flow }",
+    journal = {Journal of Energy Resources Technology},
+    volume = {122},
+    number = {3},
+    pages = {115-122},
+    year = {2000},
+    month = {05},
+    abstract = "{One commonly used method for determining oil and gas production velocities is to limit production rates based on the American Petroleum Institute Recommended Practice 14E (API RP 14E). This guideline contains an equation to calculate an “erosional” or a threshold velocity, presumably a flow velocity that is safe to operate. The equation only considers one factor, the density of the medium, and does not consider many other factors that can contribute to erosion in multiphase flow pipelines. Thus, factors such as fluid properties, flow geometry, type of metal, sand production rate and size distribution, and flow composition are not accounted for. In the present paper, a method is presented that has been developed with the goal of improving the procedure by accounting for many of the physical variables including fluid properties, sand production rate and size, and flowstream composition that affect sand erosion. The results from the model are compared with several experimental results provided in the literature. Additionally, the method is applied to calculate threshold flowstream velocities for sand erosion and the results are compared with API RP 14E. The results indicate that the form of the equation that is provided by the API RP 14E is not suitable for predicting a production flowstream velocity when sand is present. [S0195-0738(00)00203-X]}",
+    issn = {0195-0738},
+    doi = {10.1115/1.1288209},
+    url = {https://doi.org/10.1115/1.1288209},
+    eprint = {https://asmedigitalcollection.asme.org/energyresources/article-pdf/122/3/115/5662595/115\_1.pdf},
+}
+
+@book{versteeg,
+  title={An Introduction to Computational Fluid Dynamics: The Finite Volume Method},
+  author={Versteeg, H.K. and Malalasekera, W.},
+  isbn={9780131274983},
+  lccn={95006736},
+  url={https://books.google.com.br/books?id=RvBZ-UMpGzIC},
+  year={2007},
+  publisher={Pearson Education Limited}
+}
+
+@book{petrila,
+  title={Basics of Fluid Mechanics and Introduction to Computational Fluid Dynamics},
+  author={Petrila, T. and Trif, D.},
+  isbn={9780387238371},
+  lccn={2006295458},
+  series={Numerical Methods and Algorithms},
+  url={https://books.google.co.mz/books?id=pMH\_fEFdilMC},
+  year={2004},
+  publisher={Springer US}
+}
+
+@book{anderson,
+  title={Computational Fluid Dynamics},
+  author={Anderson, J.D.},
+  isbn={9780070016859},
+  lccn={94021237},
+  series={Computational Fluid Dynamics: The Basics with Applications},
+  url={https://books.google.com.br/books?id=dJceAQAAIAAJ},
+  year={1995},
+  publisher={McGraw-Hill Education}
+}
+@book{batchelor,
+  title={An Introduction to Fluid Dynamics},
+  author={Batchelor, C.K. and Batchelor, G.K.},
+  isbn={9780521663960},
+  lccn={67021953},
+  series={Cambridge Mathematical Library},
+  url={https://books.google.com.br/books?id=Rla7OihRvUgC},
+  year={2000},
+  publisher={Cambridge University Press}
+}
+
+
+@proceedings{kumar,
+    author = {Kumar, Praveen G. and Smith, Byron R.J. and Vedapuri, Damodaran and Subramani, Hariprasad J. and Rhyne, Lee D.},
+    title = "{Sand Fines Erosion in Gas Pipelines – Experiments and CFD Modeling}",
+    volume = {All Days},
+    series = {NACE CORROSION},
+    year = {2014},
+    month = {03},
+    abstract = "{ABSTRACTSolid particle erosion is an important flow assurance concern encountered in existing as well as new oil and gas pipelines. In spite of the sand control/management techniques implemented down-hole, fine sand (less than 50-75 microns) often may find its way into the piping components of onshore, offshore, and subsea facilities causing erosion/wear and subsequent pipeline integrity issues. Suitable design of the piping components with capability to monitor wear at hotspots and/or flow manipulations could be made if the erosive impact of this fine sand could be quantified by predictive methods using CFD framework. In this work, experimental results and CFD erosion prediction in a 50.8 mm (2 in) erosion test loop of elbows in series have been reported. The test has been carried out using air/sand system with air flow rate of 32 m/s and 28 micron sand of 0.0025 volume percentage concentration. The thickness loss in the elbows measured using ultrasonic erosion probes has been reported. CFD modeling of the elbows in series has been carried out with the single particle erosion models reported by Oka et al. (Wear, 2005), DNV (DNV RP o501), Grant and Tabakoff (J. Aircraft, 1975) and E/CRC (Zhang et al., J. Fluids Engg., 2009) and predictive capability of these models has been compared to experimental results.}",
+    note = {NACE-2014-3964},
+    eprint = {https://onepetro.org/NACECORR/proceedings-pdf/CORR14/All-CORR14/NACE-2014-3964/1502979/nace-2014-3964.pdf},
+}
+
+@incollection{zum,
+title = {Chapter 8 Erosive Wear of Metals},
+editor = {Karl-Heinz Zum Gahr},
+series = {Tribology Series},
+publisher = {Elsevier},
+volume = {10},
+pages = {531-553},
+year = {1987},
+booktitle = {Microstructure and Wear of Materials},
+issn = {0167-8922},
+doi = {https://doi.org/10.1016/S0167-8922(08)70726-0},
+url = {https://www.sciencedirect.com/science/article/pii/S0167892208707260},
+abstract = {Publisher Summary
+This chapter discusses erosive wear of metals. Tribosystems suffering erosive wear in practice can be characterized as open systems—that is, the counterbody is continuously replaced. A second feature is that wear on the counterbody is mostly uninteresting, although electrical contacts represent an exception. Erosive wear can be divided among different wear modes. In general, erosive wear is caused on solid bodies by the sliding or impacting action of solids, liquids, gases or a combination of these. Blast erosion is caused by solid particles that are carried by a gas stream or are accelerated by certain forces. The angle of incidence of the particles influences the wear substantially, and can change the wear mechanism. Blast erosion can result in problems in areas such as pneumatic transportation of coal dust or aero gas turbines. Flush erosion occurs by the flowing action of a liquid stream that carries solid particles—for example, in pipelines for the transportation of slurries. In addition, wear mechanism is also discussed in the chapter.}
+}
+
+@book{hutchings,
+  title={Tribology: Friction and Wear of Engineering Materials},
+  author={Hutchings, I. and Shipway, P.},
+  isbn={9780081009512},
+  url={https://books.google.com.br/books?id=yRR2DQAAQBAJ},
+  year={2017},
+  publisher={Elsevier Science}
+}
+
+@article{divakar,
+title = {Effect of the material surface hardness on the erosion of AISI316},
+journal = {Wear},
+volume = {259},
+number = {1},
+pages = {110-117},
+year = {2005},
+note = {15th International Conference on Wear of Materials},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/j.wear.2005.02.004},
+url = {https://www.sciencedirect.com/science/article/pii/S0043164805001067},
+author = {M. Divakar and V.K. Agarwal and S.N. Singh},
+keywords = {Erosion, Austenitic stainless steel, Jet impingement tester, Impact angle, Impact velocity, Work hardening},
+abstract = {Erosion due to impact of hard and abrasive particles is a common phenomenon observed in many industrial situations. A number of operating variables such as the impact angle and impact velocity affect the erosion process. The rate of erosion is influenced by the relative hardness of the target material and the particles impacting on the surface.In the present work, erosion of austenitic stainless steel has been examined under varying conditions. The hardness of the steel specimens was changed by cold rolling and case hardening of the surface by nitriding. Several specimens having different hardness were prepared using the above techniques. These samples were tested in an air jet impingement tester (as per ASTM G76 standard). Silica sand particles having mean particle size of 100, 145 and 200μm were used for impingement on the steel surface of varying hardness. The specimens were tested at impact angles varying between 15° and 90° and the impact velocity of the particles was changed between 20 and 32m/s. The tests were also conducted at specimen temperature varying between the room temperature to 150°C. The eroded specimens were examined in an electron microscope to study the material removal process. This paper discusses the results of this extensive test program to study the erosive wear behavior of AISI 316 austenitic stainless steel specimens.}
+}
+
+
+@article{levy,
+title = {The effects of erodent composition and shape on the erosion of steel},
+journal = {Wear},
+volume = {89},
+number = {2},
+pages = {151-162},
+year = {1983},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/0043-1648(83)90240-5},
+url = {https://www.sciencedirect.com/science/article/pii/0043164883902405},
+author = {Alan V. Levy and Pauline Chik},
+abstract = {The effects of erodent composition, hardness-strength characteristics and shape on the erosion of AISI 1020 carbon steel were determined. Tests were performed at a velocity of 80 m s−1 at two angles of impingement (α = 30° and 90°). Angularly shaped particles of five compositions were used with Vickers' hardnesses HV from 115 to 3000 kgf mm−2. It was determined that the erosion rate increased with increasing particle hardness to a constant rate for particles with HV > 700 kgf mm−2. The hardness was a measure of the friability of the particle composition. When the particles were strong enough not to break up on impacting the AISI 1020 steel surface, the erosion rate became constant. It was also determined by using angular and spherical steel erodents that angular particles can result in four times more erosion than spherical particles.}
+}
+
+@article{lieb,
+title = {The effect of erodent particle characteristics on the erosion of metals},
+journal = {Wear},
+volume = {151},
+number = {2},
+pages = {381-390},
+year = {1991},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/0043-1648(91)90263-T},
+url = {https://www.sciencedirect.com/science/article/pii/004316489190263T},
+author = {Markus Liebhard and Alan Levy},
+abstract = {The effects of several particle variables on the erosivity of particle streams were determined. They included shape, mass, size impact velocity and feed rate. Tests were carried out at room temperature on 1018 steel using spherical glass beads and angular SiC, neither of which shattered upon impact. The ranges of the test variables, particularly the particle velocities, used in the investigation were considerably different from those reported in the literature. It was determined that the particle size effect was different for spherical and angular particles. The angular particles were much more erosive than the spherical particles. Lower feed rates caused more mass loss than higher feed rates when tests with large differences in the feed rate were compared.}
+}
+
+@article{clark,
+title = {A re-examination of the ‘particle size effect’ in slurry erosion},
+journal = {Wear},
+volume = {248},
+number = {1},
+pages = {147-161},
+year = {2001},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/S0043-1648(00)00556-1},
+url = {https://www.sciencedirect.com/science/article/pii/S0043164800005561},
+author = {H.McI. Clark and Ryan B. Hartwich},
+keywords = {Particle size, Slurry erosion, Erosion rate, Aluminium, Pyrex glass},
+abstract = {The nature and significance of what has been called the ‘particle size effect’ on the rate of slurry erosion and the problem of its experimental evaluation are discussed. Experiments involving the change of erodent particle size in typical laboratory test equipment, while revealing a decrease in erosion rate with decreasing erodent particle size, also produce significant changes in the slurry flow conditions and particle motion which, unless evaluated quantitatively, will mask the nature of the particle size effect. Some model for the rate of material removal must be assumed to allow comparison between the conditions examined. We assume this to be the rate of dissipation of erodent particle kinetic energy at impact. Wear results have been obtained using a slurry pot erosion tester (for which the flow conditions about, and impact conditions on, the 6mm diameter cylindrical specimens have been modelled and experimentally confirmed), using 0.94wt. suspensions of SiC (varying in mean particle size from 14 to 780μm) in diesel oil for aluminium and Pyrex glass. For aluminium no damage threshold was observed and the experimental erosion rate varied as dp2 over the whole particle size range. A contribution to this of dp was found to be ascribable to fluid flow changes in the experimental apparatus and the remaining contribution of dp between 100 and 780μm tentatively assigned to the decrease in surface energy of debris particles with increasing particle size. Below 100μm there is a transition from wear by particle impact to wear by wet abrasion by particles moving across the surface. Quantitative analysis of erosion rates on the basis of particle impact energies was not possible in this range. For Pyrex glass, erosion wear was measured only between 390 and 780μm and was found to vary as dp4. This dependence was made up of dp for fluid flow changes, dp for debris particle size and dp2 for the influence of an energy threshold for damage of between 2 and 8μJ for each particle impact. After taking flow conditions and squeeze film retardation at impact into account, it is concluded that there is no fundamental change in the interaction between impacting erodent particles and the wearing surface with increasing particle size between 100 and 780μm
+}
+
+@article{Ansys,
+abstract = {Моя статья об ANSYS FLUENT и рассчёте с помощью него плёночного охлаждения},
+author = {{ANSYS TEORY GUIDE}},
+file = {:C\:/Users/joaokern/Desktop/DISSERTACAO2/5 - Referencias/CFD/ANSYS Fluent Theory Guide 15.pdf:pdf},
+journal = {ANSYS Inc., USA},
+number = {November},
+pages = {724--746},
+title = {{ANSYS Fluent Theory Guide}},
+volume = {15317},
+year = {2013}
+}
+
+
+@article{clark2,
+title = {Specimen diameter, impact velocity, erosion rate and particle density in a slurry pot erosion tester},
+journal = {Wear},
+volume = {162-164},
+pages = {669-678},
+year = {1993},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/0043-1648(93)90065-T},
+url = {https://www.sciencedirect.com/science/article/pii/004316489390065T},
+author = {Hector McI. Clark},
+abstract = {Using the technique of measuring impact crater size, stagnation line impact velocities of glass spheres (mean diameter 666 μm) suspended in diesel oil at 40 °C on cylindrical copper erosion test specimens ranging in diameter from 3.2 mm to 9.5 mm tested at a nominal speed of 18.7 m s−1 in a slurry pot tester have been measured. Similarly, the variation in normal impact velocity of the same glass spheres as a function of angular location about the specimen has been measured for a 4.7 mm diameter specimen. Erosion rates for 1020HR steel specimens in the diameter range 3.2 mm to 9.1 mm were determined using a 1.2 wt. suspension in diesel oil of silicon carbide particles, mean size 136 μm. Stagnation line impact velocities have been measured for spherical particles ranging in density between 2420 kg m−3 and 7830 kg m−3 suspended in diesel oil. The changes in impact conditions and erosion rates were analyzed using a model of suspension flow about, and particle impact on, a cylindrical target. It is shown that changes in erosion rate can be well accounted for by the changes in mean kinetic energy dissipated in collision and the frequency of particle impact, themselves controlled by the conditions of two-phase flow. It was also found that while the dispersion of solid particles in a slurry pot tester is very fast, the test method is subject to uncertainty in the value of the free-stream velocity. This effect is thought to be caused by rotation of the suspension in the test apparatus. A method of estimating its magnitude is given.}
+}
+
+@article{walker,
+title = {Influence of particle shape on slurry wear of white iron},
+journal = {Wear},
+volume = {332-333},
+pages = {1021-1027},
+year = {2015},
+note = {20th International Conference on Wear of Materials},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/j.wear.2014.12.029},
+url = {https://www.sciencedirect.com/science/article/pii/S0043164814004098},
+author = {C.I. Walker and M. Hambe},
+keywords = {Slurry, Erosion, White iron, Wear, Particle shape},
+abstract = {Slurry particle shape is an important variable in determining equipment life in mineral processing operations, especially in the grinding circuit. Slurry particles here are generally coarse, sharp and at high concentrations. Little information is available to guide practitioners in measuring particle shape or understanding the impact of particle shape on the wear rate of the hard white irons that are commonly used in processing equipment. The first part of the current work has explored the differences between 2 methods of measuring particle shape – Circularity Factor (CF) a ratio of the perimeter to projected area of the particles and spike parameter (SPQ) which is an analytical method of fitting triangles to the prominent features of the particle outline. Calculating the CF and SPQ for a wide range of particle shapes (from angular to round) found a close linear correlation between the two. This was surprising given that the more complex SPQ methodology was developed to improve particle shape characterisation. The second part of the work used a large scale Coriolis tester to determine the effect of particles of different shape on the wear rate of white cast iron. To simulate the type of wear experienced in grinding circuits a range of different particle shapes with similar CF to those observed in field applications were tested. Coarse silicon carbide, alumina and silica sand particles were individually run through the Coriolis tester. By recirculating the particles in the rig, the shape became more rounded (with CF eventually spanning the range seen in field applications) without dramatically impacting particle size. An inverse power law relationship was found between the CF and the erosion rate for white iron. This correlation should be able to be used to determine the impact of changes in CF on equipment wear life. A third element of the work was a microscopic investigation of the worn sample surface from the Coriolis tester to identify changes in wear mechanisms with particle hardness and shape. In addition a comparison was made with worn slurry pump parts to ensure that the mechanisms of wear from the Coriolis test were representative of those seen in equipment in the field.}
+}
+
+@article{lind,
+title = {The effect of velocity on the solid particle erosion rate of alloys},
+journal = {Wear},
+volume = {225-229},
+pages = {510-516},
+year = {1999},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/S0043-1648(99)00085-X},
+url = {https://www.sciencedirect.com/science/article/pii/S004316489900085X},
+author = {B.A. Lindsley and A.R. Marder},
+keywords = {Solid particle erosion, Particle velocity, Velocity exponent, Erosion test methodology},
+abstract = {Velocity is a critical test variable in erosion, and can easily overshadow changes in other variables, such as target material, impact angle, etc. The effect of velocity on erosion rate was studied in 70–30 brass (cold worked and annealed) and Fe–C martensite (as-quenched and tempered) and it was found, as previously shown, that erosion rate is dependent on velocity by a power law, given by ER=kVn. However, the velocity exponent n was found to be target material independent and is governed by test conditions, including particle characteristics and the erosion test apparatus. In addition, n is not dependent on the erosion mechanism. Results from tested as-quenched martensite and tempered martensite showed that the exponent is approximately 2.9 for both materials, even though martensite eroded by a brittle cracking mechanism, while tempered martensite eroded by a plastic deformation mechanism. No difference in the erosion rate relationship was found between the fully annealed and the 70 cold worked brass. The exponent n was found to change over time with nominally the same erosion test conditions, indicating that n is very sensitive to slight changes in erodent particles and/or the test apparatus, and that it must be measured periodically if erosion results generated at different times are to be compared.1Prime Novelty: The velocity exponent n is independent of both target material and erosion mechanism and is highly dependent on erosion test conditions for the materials tested.1}
+}
+
+@article{trus,
+title = {A literature survey on abrasive wear in hydraulic machinery},
+journal = {Wear},
+volume = {20},
+number = {1},
+pages = {29-50},
+year = {1972},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/0043-1648(72)90285-2},
+url = {https://www.sciencedirect.com/science/article/pii/0043164872902852},
+author = {G.F. Truscott},
+abstract = {The survey considers the factors affecting abrasive wear—the properties of the solid particles, the construction materials and the flow—and various types of wear. The main sources of information are from laboratory wear tests on materials and pumps, and from service experience on pumps and water-turbines. The effects of wear on performance and working life are also discussed. Finally, the main points emerging from the survey are listed.}
+}
+
+@article{finnie2,
+title = {The influence of impingement angle on the erosion of ductile metals by angular abrasive particles},
+journal = {Wear},
+volume = {152},
+number = {1},
+pages = {91-98},
+year = {1992},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/0043-1648(92)90206-N},
+url = {https://www.sciencedirect.com/science/article/pii/004316489290206N},
+author = {I. Finnie and G.R. Stevick and J.R. Ridgely},
+abstract = {The erosion of ductile metals by angular abrasive particles at grazing angles of incidence is generally accepted as being due to a cutting mechanism. By contrast, a number of widely different mechanisms have been proposed to explain erosion at perpendicular or near-perpendicular angles of impingement. In the present work the influence of the roughness of an eroded surface is examined. It is shown that measurements of surface profile may be combined with the analysis of a grain striking a smooth surface to predict the value of erosion for globally perpendicular impact.}
+}
+
+@article{yabuki,
+title = {Critical impact velocity in the solid particles impact erosion of metallic materials},
+journal = {Wear},
+volume = {233-235},
+pages = {468-475},
+year = {1999},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/S0043-1648(99)00170-2},
+url = {https://www.sciencedirect.com/science/article/pii/S0043164899001702},
+author = {Akihiro Yabuki and Kazuo Matsuwaki and Masanobu Matsumura},
+keywords = {Erosion, Solid particle, Critical impact velocity, Friction coefficient, Impact angle},
+abstract = {Solid particles impact erosion of metallic materials proceeds through two kinds of damage processes. One is the removal of material due to repeated plastic deformation, and the other is cutting. These processes occur simultaneously and the ratio of each contribution to the total damage depends not only on the impact angle (the predominant parameter) but also on the impact velocity. As the impact velocity goes down, a solid particle tends not to skid on the target material surface, and hence the cutting damage is reduced. At a certain lower velocity, the particle does not skid at all, resulting in no cutting damage but plastic deformation damage only. This velocity was defined as the “critical impact velocity”. In this study, the methodology to determine the critical velocity through a measurement of the coefficient of friction was established, that is, the dynamic friction coefficient during skidding and the static friction coefficient during rolling without skidding. In order to measure the coefficient of friction at the moment of particle impact, a rotating target apparatus was developed. The critical impact velocity thus determined depended on the hardness of both material and particle, as well as on the shape and size of the solid particles.}
+}
+
+@article{albu,
+title = {Effect of impingement angle on slurry erosion behaviour and mechanisms of 1017 steel and high-chromium white cast iron},
+journal = {Wear},
+volume = {262},
+number = {9},
+pages = {1187-1198},
+year = {2007},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/j.wear.2006.11.018},
+url = {https://www.sciencedirect.com/science/article/pii/S0043164806004510},
+author = {M.A. Al-Bukhaiti and S.M. Ahmed and F.M.F. Badran and K.M. Emara},
+keywords = {Slurry erosion, Impingement angle, Erosion mechanisms, 1017 steel, High-Cr white cast iron},
+abstract = {In the present work a series of systematic erosion tests were carried out to investigate the influence of impingement angle on erosion mechanisms of 1017 steel and high-Cr white cast iron using a slurry whirling-arm test rig. Scanning electron microscopy (SEM), image analysis system, optical microscopy as well as gravimetric and microhardness measurements were utilized to identify the slurry erosion process. Test results showed that, the effect of impingement angle on erosion mechanisms of 1017 steel has three regions. In the first region (θ≤15°) shallow ploughing and particle rolling were the dominant erosion mechanisms, microcutting and deep ploughing in the second region (15°<θ<75°), while indentations and material extrusion prevailed in the third region (θ≥75°). For high-Cr white cast iron the test results showed that, the erosion mechanisms involved both plastic deformation of the ductile matrix and brittle fracture of the carbides. At low impingement angles (up to 45°) observations of microphotographs of the impacted surfaces revealed that, plastic deformation of the ductile matrix was the dominant erosion mechanism and the carbides fracture was negligible which lead to small erosion rate. Whereas, at high impingement angles (greater than 45°) gross fracture and cracking of the carbides were the main erosion mechanisms in addition to indentation with extruded lips of the ductile matrix.}
+}
+@article{gandhi,
+title = {CFD based prediction of erosion rate in large scale wall-fired boiler},
+journal = {Applied Thermal Engineering},
+volume = {42},
+pages = {90-100},
+year = {2012},
+note = {Heat Powered Cycles Conference, 2009},
+issn = {1359-4311},
+doi = {https://doi.org/10.1016/j.applthermaleng.2012.03.015},
+url = {https://www.sciencedirect.com/science/article/pii/S1359431112001846},
+author = {Mikilkumar B. Gandhi and Rupa Vuthaluru and Hari Vuthaluru and David French and Kalpit Shah},
+keywords = {Wall-fired furnace, FLUENT, Multiphase flow, Particle trajectories, Erosion rate},
+abstract = {In pulverised coal fired boilers, entrained fly ash particles in the flue gas may cause erosive wear on metal surfaces along the flow field. This can have a significant effect on the operational life of various sections of the boiler (in particular convective heat exchanger tubes). In this work, Computational Fluid Dynamics (CFD) based code FLUENT was used in conjunction with a developed erosion model for a large-scale furnace to understand the flow field and identify the areas likely to be subjected to erosion under various operating conditions. An Eulerian–Lagrangian approach was used to analyse the continuum phase and particle tracking for individual coal particles. The flow field has been thoroughly examined in terms of velocity, particle and temperature profiles along the gas flow path. The data obtained on particle velocities and trajectories have been utilised to predict the extent of erosion in selected areas of the boiler. Predictions have been found to be in good agreement with the published data as well as plant observations for velocities ranging from 15 to 32 m/s showing a deviation of 0.60%. The results obtained from the present work for understanding erosion pattern in boilers are not only of practical significance but also provide a platform for the development of an erosion tool which could assist power utilities in avoiding unnecessary shutdowns and penalties associated with replacement of boiler components.}
+}
+
+@article{tsai,
+title = {Experimental measurement of accelerated erosion in a slurry pot tester},
+journal = {Wear},
+volume = {68},
+number = {3},
+pages = {289-303},
+year = {1981},
+issn = {0043-1648},
+doi = {https://doi.org/10.1016/0043-1648(81)90178-2},
+url = {https://www.sciencedirect.com/science/article/pii/0043164881901782},
+author = {W. Tsai and J.A.C. Humphrey and I. Cornet and A.V. Levy},
+abstract = {An apparatus is described and experimental measurements are reported for the accelerated erosion of three steel alloys by coal and by SiC suspensions in kerosene. The measurements are correlated on the basis of dimensional analysis considerations with empirical constants in the correlation determined through least-squares polynomial regression of the data. The high speed nature of the tests yields results which are essentially independent of viscous effects in the present configuration. Various observations related to the fluid mechanics, temperature and initial water content of the coal in the particle suspension are discussed. Recommendations are made for the construction of an improved apparatus for standardized accelerated erosion testing of ductile materials.}
+}
+
+@article{kesana,
+    author = {Kesana, N. R. and Throneberry, J. M. and McLaury, B. S. and Shirazi, S. A. and Rybicki, E. F.},
+    title = "{Effect of Particle Size and Liquid Viscosity on Erosion in Annular and Slug Flow}",
+    journal = {Journal of Energy Resources Technology},
+    volume = {136},
+    number = {1},
+    year = {2013},
+    month = {09},
+    issn = {0195-0738},
+    doi = {10.1115/1.4024857},
+    url = {https://doi.org/10.1115/1.4024857},
+    note = {012901},
+    eprint = {https://asmedigitalcollection.asme.org/energyresources/article-pdf/136/1/012901/6145226/jert\_136\_01\_012901.pdf},
+}
+
+@article{launder,
+title = {The numerical computation of turbulent flows},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+volume = {3},
+number = {2},
+pages = {269-289},
+year = {1974},
+issn = {0045-7825},
+doi = {https://doi.org/10.1016/0045-7825(74)90029-2},
+url = {https://www.sciencedirect.com/science/article/pii/0045782574900292},
+author = {B.E. Launder and D.B. Spalding},
+abstract = {The paper reviews the problem of making numerical predictions of turbulent flow. It advocates that computational economy, range of applicability and physical realism are best served at present by turbulence models in which the magnitudes of two turbulence quantities, the turbulence kinetic energy k and its dissipation rate ϵ, are calculated from transport equations solved simultaneously with those governing the mean flow behaviour. The width of applicability of the model is demonstrated by reference to numerical computations of nine substantially different kinds of turbulent flow.}
+}
+
+@article{kowsari,
+author = {Jafar, Reza and Nouraei, Hooman and Emamifar, M. and Papini, M. and Spelt, J.K.},
+year = {2014},
+month = {01},
+pages = {},
+title = {Erosion modeling in abrasive slurry jet micro-machining of brittle materials},
+volume = {17},
+journal = {Journal of Manufacturing Processes},
+doi = {10.1016/j.jmapro.2014.08.006}
+}
+
+@article{turb,
+author = {Souza, J.F.A. and Oliveira, Leopoldo and Azevedo, José and Soares, Ivan and Mata, Mauricio},
+year = {2011},
+month = {03},
+pages = {21-41},
+title = {Uma revisão sobre a turbulência e sua modelagem},
+volume = {29},
+journal = {Revista Brasileira de Geofísica},
+doi = {10.1590/S0102-261X2011000100002}
+}
+
+
+@online{jwce,
+  author = {JWC},
+  title = {{Centrifuge Protection in Drilling Mud Solids Control}},
+  year = 2022,
+  url = {https://www.jwce.com/application/oilgasenergy/},
+  urldate = {2022-07-02}
+}
+
+@online{rbn,
+  author = {RBN ENERGY},
+  title = {{Up Against The Well} Roughneck Mudder: Drilling Fluids And The Shale Revolution},
+  year = 2022,
+  url = {https://rbnenergy.com/up-against-the-well-roughneck-mudder-drilling-fluids-and-the-shale-revolution},
+  urldate = {2022-07-02}
+}
+
+@Techreport{petrobras,
+author={Petrobras},
+title={Atividade de Produção de Gás e Condensado no Campo de Mexilhão},
+number={IEI-2006-32},
+institution={Petrobras},
+organization={Petrobras},
+address={São Paulo},
+year={2006}
+}
+
+@mastersthesis{pereira,
+author={Marina Seixas Pereira},
+title={Caracterização de cascalho e lama de perfuração ao longo do processo de controle de sólidos em sondas de petróleo e gás},
+school={Universidade Federal de Uberlândia},
+address={Uberlândia, Minas Gerais},
+pages={160},
+year={2010}
+type={Mestrado em Engenharia química}
+pagename = {f.}
+
+}
+
+@mastersthesis{fialho,
+author={Poline Fernandes Fialho},
+title={Cascalho de perfuração de poços de petróleo e gás. Estudo do potencial de aplicação em concreto},
+school={Universidade Federal do Espírito Santo},
+address={Vitória, Espirito Santo},
+pages={217},
+year={2012}
+type={Mestrado em Engenharia civil.}
+pagename = {f.}
+}
+
+@mastersthesis{schaffel,
+author={Silvia Blajberg Schaffel},
+title={A questão ambiental na etapa de perfuração
+de poços marítimos de óleo e gás no Brasil.},
+school={Universidade Federal do Rio de Janeiro},
+address={Rio de Janeiro - RJ},
+pages={147},
+year={2002}
+type={Dissertação de mestrado em Ciências em planejamento energético.}
+pagename = {f.}
+}
+
+
+@mastersthesis{bortotti,
+author={Thais Bortotti Fagundes},
+title={Caracterização de cascalhos de perfuração de poços de
+petróleo por técnicas analíticas instrumentais.},
+school={Escola Politécnica da Universidade de São Paulo.},
+address={São Paulo- SP},
+pages={221},
+year={2018}
+type={Dissertação de mestrado em Ciências.}
+pagename = {f.}
+}
+
+SILVA, Cristiane Fernandes da. Análise geomecânica dos carbonatos do pré-sal da
+Bacia de Santos. 2015. 129 f. Dissertação (Mestrado) - Curso de Engenharia Civil,
+Departamento de Engenharia Civil, Rio de Janeiro, 2015.
+
+
+@mastersthesis{silva,
+author={Cristiane Fernandes da Silva},
+title={Análise geomecânica dos carbonatos do pré-sal da
+Bacia de Santos.},
+school={Escola Politécnica da Universidade de São Paulo.},
+address={Departamento de Engenharia Civil, Rio de Janeiro.},
+pages={129},
+year={2015}
+type={Dissertação de mestrado em Engenharia Civil}
+pagename = {f.}
+}
+
+@inproceedings{DYOVANI,
+   author = {Dyovani Bruno Lima dos Santos, }, 
+    title = {Propriedades reológicas de soluções aquosas de goma
+xantana com barita},
+booktitle = {XIX Jornada em engenharia química},
+   volume =  XIX,
+     year = 2014,
+  address = {uBERLÂNDIA}, 
+}
+
+@book{shalev, place={Cambridge}, title={Understanding Machine Learning: From Theory to Algorithms}, DOI={10.1017/CBO9781107298019}, publisher={Cambridge University Press}, author={Shalev-Shwartz, Shai and Ben-David, Shai}, year={2014}}
